@@ -32,18 +32,17 @@ RUN pip install --no-cache-dir --upgrade pip==${PIP_VERSION} \
  && pip install --no-cache-dir --upgrade poetry==${POETRY_VERSION} \
  && pip cache purge \
  && poetry config virtualenvs.create false \
- && poetry install --no-root --no-interaction --no-ansi \
- && poetry cache clear --all --no-interaction --no-ansi .
+ && poetry install --no-root --no-interaction
 
 # -- Build Stage for Local Development -----------
-FROM gcr.io/distroless/python3-debian12:debug AS dev
-ARG GROUPNAME=nogroup
-ARG USERNAME=nobody
-ARG WORKDIR=/app
+# FROM gcr.io/distroless/python3-debian12:debug AS dev
+# ARG GROUPNAME=nogroup
+# ARG USERNAME=nobody
+# ARG WORKDIR=/app
 
-USER ${USERNAME}
-WORKDIR ${WORKDIR}
-COPY --chown=${USERNAME}:${GROUPNAME} --from=builder . ${WORKDIR}
+# USER ${USERNAME}
+# WORKDIR ${WORKDIR}
+# COPY --chown=${USERNAME}:${GROUPNAME} --from=builder . ${WORKDIR}
 
 # -- Build Stage for Production -----------
 # FROM builder AS production
