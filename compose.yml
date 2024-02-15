@@ -1,0 +1,19 @@
+# -*-mode:yaml-*- vim:ft=yaml
+x-TZ:
+  &TZ
+  TZ: 'Asia/Tokyo'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    init: true
+    env_file: .env
+    environment:
+      LANG: ${APP_LANG}
+      <<: *TZ
+    volumes:
+      - .:/app
+    command: sleep infinity
