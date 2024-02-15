@@ -10,6 +10,6 @@
 If you have any questions, please reach out directly by [creating an issue][new-issue].
 you can also [report in discussions][new-discussion].
 
-[new-issue]: https://github.com/MasahiroSakoda/pycontainer/issues/new/choose
-[new-sec-issue]: https://github.com/MasahiroSakoda/pycontainer/security/advisories/new
-[new-discussion]: https://github.com/MasahiroSakoda/pycontainer/discussions
+[new-issue]: https://github.com/MasahiroSakoda/JupyterContainer/issues/new/choose
+[new-sec-issue]: https://github.com/MasahiroSakoda/JupyterContainer/security/advisories/new
+[new-discussion]: https://github.com/MasahiroSakoda/JupyterContainer/discussions
