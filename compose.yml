@@ -10,10 +10,11 @@ services:
       dockerfile: Dockerfile
     working_dir: /app
     init: true
+    tty: true
     env_file: .env
     environment:
       LANG: ${APP_LANG}
       <<: *TZ
     volumes:
       - .:/app
-    command: sleep infinity
+    command: poetry run jupyter lab --no-browser --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.disable_check_xsrf=True
