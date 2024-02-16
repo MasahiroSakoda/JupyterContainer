@@ -15,6 +15,8 @@ sympy = "^1.12"
 pandas = "^2.2.0"
 matplotlib = "^3.8.3"
 seaborn = "^0.13.2"
+scrapy = "^2.11.1"
+beautifulsoup4 = "^4.12.3"
 
 
 [build-system]
